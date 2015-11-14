@@ -1,0 +1,11 @@
+#----------------SSLWCPlus-----------------#
+#-----------Created By HandGrenade---------#
+
+#List of items which are blocked when next to a LWC Protected block. Default: BEDROCK
+blocked-items:
+- BEDROCK
+messages:
+  no-place: 'You may not place this here!'
+  owner-place-warning: 'Placing this here could be dangerous, and lead to a bypass of LWC protection!'
+  no-rightclick: 'You may not interact with this!'
+  owner-rightclick-warning: 'This block could be dangerous, and lead to a bypass of LWC protection!'
