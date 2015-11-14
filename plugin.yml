@@ -1,0 +1,5 @@
+name: SSLWCPlus
+main: com.handgrenade.lwcplus.LWCPlus
+author: HandGrenade
+description: A SerendipityMC custom plugin to blacklist specific blocks near LWC!
+version: 1.0
