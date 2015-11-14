@@ -31,27 +31,27 @@ public class RightClickListener implements Listener {
 
     @EventHandler
     public void PlayerInteract(PlayerInteractEvent e) {
-      LWC lwc = lplugin.getLWC();
-      Player p = e.getPlayer();
-      Block b = e.getClickedBlock();
-      String pname = p.getName();
+    	LWC lwc = lplugin.getLWC();
+     	Player p = e.getPlayer();
+     	Block b = e.getClickedBlock();
+     	String pname = p.getName();
        
-  		if (this.blocks.contains(String.valueOf(b.getType()))) {
-        for (Protection protection : lwc.findAdjacentProtectionsOnAllSides(b)) {
-  	      if (protection != null) {
-  	        if (!lwc.canAccessProtection(p, protection)) {
-  	          e.setCancelled(true);
-  	          p.sendMessage(this.msg1);
+  	if (this.blocks.contains(String.valueOf(b.getType()))) {
+        	for (Protection protection : lwc.findAdjacentProtectionsOnAllSides(b)) {
+  	      		if (protection != null) {
+  	        		if (!lwc.canAccessProtection(p, protection)) {
+  	        			e.setCancelled(true);
+  	          			p.sendMessage(this.msg1);
   	            		
-  	          Bukkit.broadcast(ChatColor.GRAY + "[" + ChatColor.DARK_RED + "!" + ChatColor.GRAY + "]" + ChatColor.GREEN + " " + pname +
-  	    	    ChatColor.GRAY + " has tried to" + ChatColor.LIGHT_PURPLE +  "ACCESS" + ChatColor.GRAY +  "a blacklisted item near a LWC locked block!", "lwcplus.notify");
-  	          }
+  	          			Bukkit.broadcast(ChatColor.GRAY + "[" + ChatColor.DARK_RED + "!" + ChatColor.GRAY + "]" + ChatColor.GREEN + " " + pname +
+  	    	    			ChatColor.GRAY + " has tried to" + ChatColor.LIGHT_PURPLE +  "ACCESS" + ChatColor.GRAY +  "a blacklisted item near a LWC locked block!", "lwcplus.notify");
+  	          		}
   	            	
-  	        	else if (lwc.canAccessProtection(p, protection)) {
-  	        	p.sendMessage(this.msg2);
-  	          }
-  	      }
-        }              
-  		}	
+  	        		else if (lwc.canAccessProtection(p, protection)) {
+  	        			p.sendMessage(this.msg2);
+  	          		}
+  	      		}
+        	}              
+  	}	
     }
 }
